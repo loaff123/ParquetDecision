@@ -1,0 +1,31 @@
+{
+  "all_four_final_archives_scanned": true,
+  "scans": [
+    {
+      "path": "dist/parquet-decision-public-source-0.1.0a1.tar.gz",
+      "entries_checked": 111,
+      "private_paths_history_instructions_or_cache_findings": [],
+      "file_contents_checked": true
+    },
+    {
+      "path": "dist/parquet_decision-0.1.0a1-py3-none-any.whl",
+      "entries_checked": 56,
+      "private_paths_history_instructions_or_cache_findings": [],
+      "file_contents_checked": true
+    },
+    {
+      "path": "dist/parquet_decision-0.1.0a1.tar.gz",
+      "entries_checked": 118,
+      "private_paths_history_instructions_or_cache_findings": [],
+      "file_contents_checked": true
+    },
+    {
+      "path": "parquet-decision-public-review-0.1.0a1.tar.gz",
+      "entries_checked": 67,
+      "private_paths_history_instructions_or_cache_findings": [],
+      "file_contents_checked": true
+    }
+  ],
+  "source_and_review_archive_bytes_match_manifests": true,
+  "mutable_review_tree_caches_not_deleted_during_rereview": true
+}

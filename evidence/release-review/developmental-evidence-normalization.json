@@ -1,0 +1,51 @@
+[
+  {
+    "public_file": "schema-oracle-results.json",
+    "description": "Earlier developmental independent schema/value oracle coverage",
+    "evidence_time": "earlier developmental independent gate, not a fresh final-candidate execution",
+    "raw_sha256": "00352216eddab4deabce186da4c1a604be7e15fea78ca09551ef94885f8a0d48",
+    "normalized_sha256": "00352216eddab4deabce186da4c1a604be7e15fea78ca09551ef94885f8a0d48",
+    "body_byte_identical": true,
+    "normalization": [
+      "Body bytes unchanged; only public filename presentation changed"
+    ],
+    "original_raw_file_preserved": true
+  },
+  {
+    "public_file": "publication-mutation-results.json",
+    "description": "Earlier developmental actual writer mutations, source forgery and accounting",
+    "evidence_time": "earlier developmental independent gate, not a fresh final-candidate execution",
+    "raw_sha256": "6506c20b58228966c41b763cfdb2623580c517ccf7b06e1d39c88de19c09584d",
+    "normalized_sha256": "54bea74a656c05832bdba953d7833ced8bca7ac335d406963224773314b74d51",
+    "body_byte_identical": false,
+    "normalization": [
+      "Ephemeral owned snapshot-directory filename normalized; component byte counts and hashes unchanged"
+    ],
+    "original_raw_file_preserved": true
+  },
+  {
+    "public_file": "publication-boundary-results.json",
+    "description": "Earlier developmental real publication/race/interruption/terminal boundaries",
+    "evidence_time": "earlier developmental independent gate, not a fresh final-candidate execution",
+    "raw_sha256": "e98cc5b98eb65d131d2dfc325dfeb9176824082e029c11bc94c9d08d79a877c7",
+    "normalized_sha256": "01f6a456b15e07bf0d13f01f79a6f5eb9688fc704fff4ac3795a95c9183143fd",
+    "body_byte_identical": false,
+    "normalization": [
+      "Post-rename destination path and retained owned staging path normalized; statuses, diagnostics meaning, accounting and hashes unchanged",
+      "JSON presentation indentation retained; no raw private path is exported"
+    ],
+    "original_raw_file_preserved": true
+  },
+  {
+    "public_file": "publication-budget-results.json",
+    "description": "Earlier developmental actual lowered byte-cap enforcement",
+    "evidence_time": "earlier developmental independent gate, not a fresh final-candidate execution",
+    "raw_sha256": "afecf93a2e9e46e0f1a68ff69354502fe7e9275ecf57a7bd15cfabd8721d2af3",
+    "normalized_sha256": "afecf93a2e9e46e0f1a68ff69354502fe7e9275ecf57a7bd15cfabd8721d2af3",
+    "body_byte_identical": true,
+    "normalization": [
+      "Body bytes unchanged; only public filename presentation changed"
+    ],
+    "original_raw_file_preserved": true
+  }
+]

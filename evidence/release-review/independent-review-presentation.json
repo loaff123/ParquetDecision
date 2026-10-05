@@ -1,0 +1,14 @@
+[
+  {
+    "source_description": "initial independent code review",
+    "raw_sha256": "b07f4d585c29e40304d9391aaab356d3d59f505eedfcb9153e9823d382e68250",
+    "public_presentation": "initial-independent-review.md",
+    "presentation": "substantive findings/initial outcomes summarized; private paths/planning references omitted; no final rereview claim"
+  },
+  {
+    "source_description": "initial independent newcomer review",
+    "raw_sha256": "94939082554ec8c17a772944773dc0d02b9ab831ee8cddc9a7a19bb4816be6fa",
+    "public_presentation": "initial-independent-review.md",
+    "presentation": "substantive findings/initial outcomes summarized; private paths/planning references omitted; no final rereview claim"
+  }
+]

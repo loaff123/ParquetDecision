@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0
+rootdir: DEVELOPMENT_CHECKOUT-release-candidate/source
+configfile: pyproject.toml
+collected 739 items
+
+PUBLIC_SOURCE/tests/test_artifact_writes.py . [  0%]
+.............................                                            [  4%]
+PUBLIC_SOURCE/tests/test_bundle.py ...... [  4%]
+.........................................................                [ 12%]
+PUBLIC_SOURCE/tests/test_cli_journey.py . [ 12%]
+.......................                                                  [ 15%]
+PUBLIC_SOURCE/tests/test_decisions.py ... [ 16%]
+........................                                                 [ 19%]
+PUBLIC_SOURCE/tests/test_distribution.py . [ 19%]
+...                                                                      [ 20%]
+PUBLIC_SOURCE/tests/test_failure_boundaries.py . [ 20%]
+........................                                                 [ 23%]
+PUBLIC_SOURCE/tests/test_independent_schema.py . [ 23%]
+...................................                                      [ 28%]
+PUBLIC_SOURCE/tests/test_model.py ....... [ 29%]
+........................................................................ [ 38%]
+.............                                                            [ 40%]
+PUBLIC_SOURCE/tests/test_origin.py ...... [ 41%]
+...........                                                              [ 43%]
+PUBLIC_SOURCE/tests/test_plan_cli.py .... [ 43%]
+.......................................................                  [ 51%]
+PUBLIC_SOURCE/tests/test_preflight.py ... [ 51%]
+.....................................................                    [ 58%]
+PUBLIC_SOURCE/tests/test_resource_qualification.py . [ 58%]
+.......                                                                  [ 59%]
+PUBLIC_SOURCE/tests/test_schema.py ...... [ 60%]
+.....................................................................    [ 69%]
+PUBLIC_SOURCE/tests/test_sources.py ..... [ 70%]
+.............                                                            [ 72%]
+PUBLIC_SOURCE/tests/test_stream_verify.py . [ 72%]
+........................................................................ [ 82%]
+...................                                                      [ 84%]
+PUBLIC_SOURCE/tests/test_supervision.py . [ 84%]
+......................................                                   [ 89%]
+PUBLIC_SOURCE/tests/test_transform.py ... [ 90%]
+....................                                                     [ 93%]
+PUBLIC_SOURCE/tests/test_verify_mutations.py . [ 93%]
+..................................................                       [100%]
+
+======================== 739 passed in 68.45s (0:01:08) ========================

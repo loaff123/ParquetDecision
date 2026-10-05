@@ -1,0 +1,65 @@
+{
+  "mode": "sdist",
+  "all_relative_document_links_resolve": true,
+  "readme_links": 7,
+  "links": [
+    {
+      "document": "README.md",
+      "title": "evidence/baselines",
+      "relative_target": "evidence/baselines/README.md",
+      "exists": true,
+      "target_sha256": "ce168fba77ac687ff5408b31213dca9fd7f2bcffbd20d39c53c28d50f58385f0"
+    },
+    {
+      "document": "README.md",
+      "title": "profile",
+      "relative_target": "profile.md",
+      "exists": true,
+      "target_sha256": "8d459430c2aa3f8ef7f01e31215fcb36a9a637fd279be0c853616f593e016e08"
+    },
+    {
+      "document": "README.md",
+      "title": "decisions",
+      "relative_target": "decisions.md",
+      "exists": true,
+      "target_sha256": "eae39ac65cdfb4f0daec20896f9fbdea14367a66ad96dd63e7a431f668b445ba"
+    },
+    {
+      "document": "README.md",
+      "title": "verification",
+      "relative_target": "verification.md",
+      "exists": true,
+      "target_sha256": "29f2b9b4a607e21545be49af0cad7dac5dde72fbbee6c57fadde783a1b09471e"
+    },
+    {
+      "document": "README.md",
+      "title": "bundles",
+      "relative_target": "bundles.md",
+      "exists": true,
+      "target_sha256": "79ed6e735fa281abc4e117bd95f9da43df3e31a52f34c7b463d3228d4ce85ce5"
+    },
+    {
+      "document": "README.md",
+      "title": "limitations",
+      "relative_target": "limitations.md",
+      "exists": true,
+      "target_sha256": "e99a5d6166dad98769443d0ef03998e423f90496dc21a3076d91cb5d554c2ecc"
+    },
+    {
+      "document": "README.md",
+      "title": "qualification",
+      "relative_target": "qualification.md",
+      "exists": true,
+      "target_sha256": "f5ade7c9ed5c997749a74846c58d4cf99eec652411089819a5f8a8981663f050"
+    },
+    {
+      "document": "decisions.md",
+      "title": "profile.md",
+      "relative_target": "profile.md",
+      "exists": true,
+      "target_sha256": "8d459430c2aa3f8ef7f01e31215fcb36a9a637fd279be0c853616f593e016e08"
+    }
+  ],
+  "linked_baseline_outcomes": 40,
+  "no_source_checkout_required": true
+}

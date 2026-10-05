@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_corrupt_bundle_cli_is_conflict_but_bad_coordinate_is_invalid _______
+
+tmp_path = PosixPath('TEMP_TESTS/test_corrupt_bundle_cli_is_con0')
+capsys = <_pytest.capture.CaptureFixture object at 0x7f073140edb0>
+
+    def test_corrupt_bundle_cli_is_conflict_but_bad_coordinate_is_invalid(tmp_path, capsys):
+        from parquet_decision.cli import main
+        destination, _ = bundle_case(tmp_path)
+        assert main(['origin', str(destination), '--source-id', '-1', '--row', '0']) == 2
+        capsys.readouterr()
+        (destination / '_manifest.json').write_bytes(b'edited benign manifest')
+>       assert main(['origin', str(destination), '--source-id', '1', '--row', '0']) == 1
+E       AssertionError: assert 2 == 1
+E        +  where 2 = <function main at 0x7f0731403740>(['origin', 'TEMP_TESTS/test_corrupt_bundle_cli_is_con0/result', '--source-id', '1', '--row', '0'])
+
+tests/test_origin.py:103: AssertionError
+----------------------------- Captured stdout call -----------------------------
+INVALID_INPUT: invalid strict JSON
+=========================== short test summary info ============================
+FAILED tests/test_origin.py::test_corrupt_bundle_cli_is_conflict_but_bad_coordinate_is_invalid
+1 failed in 0.24s

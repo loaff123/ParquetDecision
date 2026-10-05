@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0
+rootdir: PUBLIC_SOURCE
+configfile: pyproject.toml
+testpaths: tests
+collected 739 items
+
+tests/test_artifact_writes.py ..............................             [  4%]
+tests/test_bundle.py ................................................... [ 10%]
+............                                                             [ 12%]
+tests/test_cli_journey.py ........................                       [ 15%]
+tests/test_decisions.py ...........................                      [ 19%]
+tests/test_distribution.py ....                                          [ 20%]
+tests/test_failure_boundaries.py .........................               [ 23%]
+tests/test_independent_schema.py ....................................    [ 28%]
+tests/test_model.py .................................................... [ 35%]
+........................................                                 [ 40%]
+tests/test_origin.py .................                                   [ 43%]
+tests/test_plan_cli.py ................................................. [ 49%]
+..........                                                               [ 51%]
+tests/test_preflight.py ................................................ [ 57%]
+........                                                                 [ 58%]
+tests/test_resource_qualification.py ........                            [ 59%]
+tests/test_schema.py ................................................... [ 66%]
+........................                                                 [ 69%]
+tests/test_sources.py ..................                                 [ 72%]
+tests/test_stream_verify.py ............................................ [ 78%]
+................................................                         [ 84%]
+tests/test_supervision.py .......................................        [ 89%]
+tests/test_transform.py .......................                          [ 93%]
+tests/test_verify_mutations.py ......................................... [ 98%]
+..........                                                               [100%]
+
+======================== 739 passed in 66.74s (0:01:06) ========================

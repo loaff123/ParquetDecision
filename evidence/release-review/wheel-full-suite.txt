@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0
+rootdir: DEVELOPMENT_CHECKOUT-release-candidate/private-work/wheel-suite
+configfile: pyproject.toml
+collected 739 items
+
+WHEEL_SUITE/tests/test_artifact_writes.py . [  0%]
+.............................                                            [  4%]
+WHEEL_SUITE/tests/test_bundle.py . [  4%]
+..............................................................           [ 12%]
+WHEEL_SUITE/tests/test_cli_journey.py . [ 12%]
+.......................                                                  [ 15%]
+WHEEL_SUITE/tests/test_decisions.py . [ 15%]
+..........................                                               [ 19%]
+WHEEL_SUITE/tests/test_distribution.py . [ 19%]
+...                                                                      [ 20%]
+WHEEL_SUITE/tests/test_failure_boundaries.py . [ 20%]
+........................                                                 [ 23%]
+WHEEL_SUITE/tests/test_independent_schema.py . [ 23%]
+...................................                                      [ 28%]
+WHEEL_SUITE/tests/test_model.py . [ 28%]
+........................................................................ [ 38%]
+...................                                                      [ 40%]
+WHEEL_SUITE/tests/test_origin.py . [ 40%]
+................                                                         [ 43%]
+WHEEL_SUITE/tests/test_plan_cli.py . [ 43%]
+..........................................................               [ 51%]
+WHEEL_SUITE/tests/test_preflight.py . [ 51%]
+.......................................................                  [ 58%]
+WHEEL_SUITE/tests/test_resource_qualification.py . [ 58%]
+.......                                                                  [ 59%]
+WHEEL_SUITE/tests/test_schema.py . [ 59%]
+........................................................................ [ 69%]
+..                                                                       [ 69%]
+WHEEL_SUITE/tests/test_sources.py . [ 69%]
+.................                                                        [ 72%]
+WHEEL_SUITE/tests/test_stream_verify.py . [ 72%]
+........................................................................ [ 82%]
+...................                                                      [ 84%]
+WHEEL_SUITE/tests/test_supervision.py . [ 84%]
+......................................                                   [ 89%]
+WHEEL_SUITE/tests/test_transform.py . [ 90%]
+......................                                                   [ 93%]
+WHEEL_SUITE/tests/test_verify_mutations.py . [ 93%]
+..................................................                       [100%]
+
+======================== 739 passed in 66.09s (0:01:06) ========================

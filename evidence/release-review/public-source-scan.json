@@ -1,0 +1,18 @@
+{
+  "source_files_checked": 111,
+  "private_path_or_history_findings": [],
+  "distribution_scans": [
+    {
+      "file": "parquet_decision-0.1.0a1-py3-none-any.whl",
+      "entries_checked": 56,
+      "private_path_or_history_findings": []
+    },
+    {
+      "file": "parquet_decision-0.1.0a1.tar.gz",
+      "entries_checked": 118,
+      "private_path_or_history_findings": []
+    }
+  ],
+  "history_free_source": true,
+  "text_body_and_archive_entry_scan": true
+}

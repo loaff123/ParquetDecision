@@ -1,0 +1,80 @@
+{
+  "evidence_time": "earlier developmental independent gates",
+  "not_new_final_test_counts": true,
+  "not_proof_over_all_inputs": true,
+  "schema_and_stream_oracle": {
+    "decimal_schema_pairs": 2401,
+    "each_observed_nested_mutation": 47,
+    "final_original_data_verified": true,
+    "fully_rebound_nested_source_forgery": "CONFLICT",
+    "inplace_quiescence_negatives": 2,
+    "integer_unions": 584,
+    "nested_chunk_pairs": 16,
+    "nested_report_counters": {
+      "files": 3,
+      "input_bytes": 3713,
+      "part_bytes": 6586,
+      "rows": 8,
+      "values": 47
+    },
+    "scalar_boundary_mutations": 4,
+    "timestamp_schema_pairs": 144,
+    "zipper_partition_pairs": 5462
+  },
+  "writer_mutations": {
+    "count": 16,
+    "statuses": {
+      "collapse_null_parent": "CONFLICT",
+      "collapse_valid_parent": "CONFLICT",
+      "drop_row": "CONFLICT",
+      "duplicate_row": "CONFLICT",
+      "extra_part": "CONFLICT",
+      "invent_absent_child": "CONFLICT",
+      "invent_absent_top": "CONFLICT",
+      "invent_null_type": "CONFLICT",
+      "missing_part": "CONFLICT",
+      "reorder_rows": "CONFLICT",
+      "truncated_part": "CONFLICT",
+      "wrong_metadata": "CONFLICT",
+      "wrong_row": "CONFLICT",
+      "wrong_source_id": "CONFLICT",
+      "wrong_source_value": "CONFLICT",
+      "wrong_target_type": "CONFLICT"
+    }
+  },
+  "self_consistent_wrong_plan": "CONFLICT",
+  "strict_bundle_rejections": 8,
+  "publication_boundaries": {
+    "two_real_publishers": [
+      "CONFLICT",
+      "VERIFIED"
+    ],
+    "retry": "CONFLICT",
+    "real_sigint": "CANCELLED",
+    "real_parent_sigkill_public_destination": false,
+    "retained_marker": "INCOMPLETE",
+    "late_terminal_failures": {
+      "bad_stdout": "ERROR",
+      "crash": "ERROR",
+      "disk": "LIMIT_EXCEEDED"
+    },
+    "postrename_deadline": "LIMIT_EXCEEDED",
+    "postrename_retry": "CONFLICT",
+    "source_hashes_unchanged": true
+  },
+  "logical_file_content_accounting": {
+    "bundle_bytes": 16141,
+    "owned_staging_bytes": 29919,
+    "qualification_probe_reserve_bytes": 12,
+    "staging_inventory_sum_reconciles": true
+  },
+  "lowered_cap_refusals": {
+    "output_1": "LIMIT_EXCEEDED",
+    "output_128": "LIMIT_EXCEEDED",
+    "output_1126": "LIMIT_EXCEEDED",
+    "output_1127": "LIMIT_EXCEEDED",
+    "staging_1": "LIMIT_EXCEEDED",
+    "staging_12": "LIMIT_EXCEEDED",
+    "staging_651": "LIMIT_EXCEEDED"
+  }
+}

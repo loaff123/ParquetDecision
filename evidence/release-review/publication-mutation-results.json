@@ -1,0 +1,375 @@
+{
+  "actual_apply_mutations": {
+    "collapse_null_parent": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=1 path=[\"rec\"] expected null observation"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "collapse_valid_parent": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=2 path=[\"rec\"] unexpected null observation"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "drop_row": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 part row count differs from source inventory"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "duplicate_row": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=1 path=[\"__pc_row\"] provenance value differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "extra_part": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "actual output part inventory differs from the complete recorded inventory"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "invent_absent_child": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=0 path=[\"rec\",\"extra\"] expected null observation"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "invent_absent_top": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=0 path=[\"added\"] expected null observation"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "invent_null_type": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=0 path=[\"n\"] expected null observation"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "missing_part": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "actual output part inventory differs from the complete recorded inventory"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "reorder_rows": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=0 path=[\"__pc_row\"] provenance value differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "truncated_part": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 part hash/byte count differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "wrong_metadata": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=schema path=[] output schema metadata differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "wrong_row": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=1 path=[\"__pc_row\"] provenance value differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "wrong_source_id": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=0 path=[\"__pc_source\"] provenance value differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "wrong_source_value": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=0 path=[\"v\"] logical value differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    },
+    "wrong_target_type": {
+      "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "source=0 row=schema path=[\"n\"] output schema type differs"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+      "source_digest": "",
+      "status": "CONFLICT"
+    }
+  },
+  "combined_accounting": {
+    "probe_bytes": 12,
+    "response": {
+      "bundle_bytes": 16141,
+      "metadata_sha256": {
+        "_decision.json": "53938fa687ea437c740ac8cd128220597f2587ae7a28d397edf4e02756c37fe3",
+        "_manifest.json": "386ecbc12f69ee3621fe57c6a82171d06321877d47f53903c20b11e6ea021932",
+        "_verification.json": "d75d5942c70c44797669084f31517576002905e3a3cd2e1cb0a4d5d8f0e34e48"
+      },
+      "mode": "apply",
+      "request_digest": "c9314a0ac6b41d7d8ef0f254df435c0ddd1d0901c77ffecf375605ef37c16ed2",
+      "result": {
+        "approval_digest": "d4706525c2c600f3b8a93e667515352be44a3371fd4ef1be9f044dbcd33e71df",
+        "checked_at_utc": "2026-10-05T19:56:25.902101Z",
+        "counters": [
+          [
+            "files",
+            3
+          ],
+          [
+            "input_bytes",
+            4628
+          ],
+          [
+            "part_bytes",
+            5777
+          ],
+          [
+            "rows",
+            4
+          ],
+          [
+            "values",
+            26
+          ]
+        ],
+        "diagnostics": [],
+        "format_version": 1,
+        "output_digest": "d6644ada228b383d0d0c8a3eeb43b11469bb6dae6e681b75a5865315402b6587",
+        "plan_digest": "9c6fccd308ffd2908cb196260b5324219834452f519227f542444983906af798",
+        "source_digest": "1ee49206fb8ce6d3c2ee387afcf4a39560d2df56b5244b1b0b3c93381b66e149",
+        "status": "VERIFIED"
+      },
+      "staging_bytes": 29919
+    },
+    "staging_inventory": {
+      "INCOMPLETE": 11,
+      "approved.json": 8183,
+      "dataset/_decision.json": 8183,
+      "dataset/_manifest.json": 1654,
+      "dataset/_verification.json": 527,
+      "dataset/part-00000.parquet": 2685,
+      "dataset/part-00001.parquet": 2091,
+      "dataset/part-00002.parquet": 1001,
+      "result.json": 956,
+      "OWNED_SNAPSHOTS/source-00000.parquet": 1674,
+      "OWNED_SNAPSHOTS/source-00001.parquet": 1793,
+      "OWNED_SNAPSHOTS/source-00002.parquet": 1161
+    }
+  },
+  "original_cases": {
+    "decimal_scale": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 5614,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 3
+    },
+    "empty": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 5736,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 1
+    },
+    "integer_float": {
+      "preflight": "UNSUPPORTED"
+    },
+    "larger": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 3282090,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 100000
+    },
+    "metadata_conflict": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 6021,
+      "preflight": "NEEDS_DECISIONS",
+      "rows": 2
+    },
+    "nanoseconds": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 4087,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 3
+    },
+    "nested": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 8540,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 5
+    },
+    "ordinary": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 6933,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 3
+    },
+    "signed_unsigned": {
+      "apply": "VERIFIED",
+      "bundle_bytes": 5644,
+      "preflight": "READY_FOR_REVIEW",
+      "rows": 4
+    },
+    "timestamp_overflow": {
+      "preflight": "DATA_INCOMPATIBLE"
+    }
+  },
+  "original_source_hashes": {
+    "decimal_scale/a.parquet": "bc9f733fcd6c11c3b9ec883966ae183bae34b8797e3ae740e9c353342ad4d1a3",
+    "decimal_scale/b.parquet": "4b036511581620a6ca2004bf1f0b207fb5c0cb053bad8f35394c416cde7540be",
+    "empty/a.parquet": "3816fb693d9227f2e529d91c02e3e69fe7284a09c9c30efce1fb68e5aa7d6d85",
+    "empty/b.parquet": "443a021d8736a684149c5b994ccad247d01ad489609fe7adecc1350069a993c1",
+    "integer_float/a.parquet": "fae328ae3d525c5103ea62bcec8d51ca87d4b8f91f8d06cfaefa9f1fd6b09bda",
+    "integer_float/b.parquet": "38e1c6a8302497d99b785f6752ab4fe1f90e2a885be437bb5ce0d8b54869f196",
+    "larger/00.parquet": "612c1b4b70e197428e1869ab384b07c637d6320720bf1af487ff038b3a6116c1",
+    "larger/01.parquet": "fcd58ee37ca5078f7fb8d9933bb996cd312534d31b8400d3061e18746c0f4215",
+    "larger/02.parquet": "0993fe81bb2d3aa1fde95e5d8c0eea556ce07f5d367dc4c28e88eeff8c130a3d",
+    "larger/03.parquet": "19cd1904547384e4b35ac3ad06afc62b987abc7674b4ae2af5fdba6f2fea5f94",
+    "larger/04.parquet": "daca4f8d4c2577e6464c6b5fbda7d6aed72f71435d19309d1cb3a513b842edb9",
+    "metadata_conflict/a.parquet": "cff98f5c2b9c6b33cfb6146eeeebe82f083c1a05f84980f41ab5acc0e6004ec5",
+    "metadata_conflict/b.parquet": "0aa56d5bb9a80c2474e041aef9bee2455ca44daf8adc19e28c385c6125594787",
+    "nanoseconds/a.parquet": "955da42d3d8c6f6800e30208660fa1532ded420506ddba3e76468c730be2970e",
+    "nested/a.parquet": "23f87f03aeb960e0095160e6a42c8c0cb6ddabd0811d3c26a371f4bd1368d5c3",
+    "nested/b.parquet": "25e2d5939f7a0f4dd112b0a0559c8270ae940dde7daf4e544a3a252b5ae4d26b",
+    "ordinary/a.parquet": "352a8fac2fbb27940a65ca5b91d803ec48a40134f6dd041ed1a4f8d7ae8f10f8",
+    "ordinary/b.parquet": "3752f4f374dd9a67174f6cc5d67c0a2e881bae3723b42ea87f7407580c0e3893",
+    "signed_unsigned/a.parquet": "2266debbbd6775372ddb0eaef48fa111fc32affc7d3023c4960c19662b3ed508",
+    "signed_unsigned/b.parquet": "488c460264904379fff758fa66131ec49bb44d898aee160bfeda561e71e2a2ac",
+    "timestamp_overflow/a.parquet": "9d807f2d7de09e3bf20ea7a579f7d815e26b9ca980fc64ca62d70382225a75d0",
+    "timestamp_overflow/b.parquet": "bf3d85ddcef9a96b5714d1c4de19de85c67e179db358640537fdbf4a3d46d5ab"
+  },
+  "self_consistent_wrong_plan": {
+    "approval_digest": "b66be1ffacac106f09620273e61f2da6af666a63cf177797b80c6d6c23ad3d96",
+    "checked_at_utc": "",
+    "counters": [],
+    "diagnostics": [
+      "independently derived schema/operations/conflicts differ from approved proposal"
+    ],
+    "format_version": 1,
+    "output_digest": "",
+    "plan_digest": "c6a9d088188859af70c2613a7e2afd28c99752995aa440db9387173d446e8059",
+    "source_digest": "",
+    "status": "CONFLICT"
+  },
+  "strict_bundle_rejections": {
+    "changed_part": "ModelError: bundle exact inventory/total bytes differ",
+    "duplicate_manifest_key": "ModelError: duplicate JSON key",
+    "manifest_bool_version": "ModelError: strict manifest schema/digest/accounting cross-bindings differ",
+    "noncanonical_decision": "ModelError: bundle/control JSON must be canonical",
+    "noncanonical_report": "ModelError: bundle/control JSON must be canonical",
+    "stale_manifest_source": "ModelError: strict manifest schema/digest/accounting cross-bindings differ",
+    "stale_report_approval": "ModelError: bundle verification/decision/part digest bindings differ",
+    "unknown_manifest_key": "ModelError: strict manifest schema/digest/accounting cross-bindings differ"
+  }
+}

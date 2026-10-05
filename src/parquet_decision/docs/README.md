@@ -1,12 +1,5 @@
 # ParquetDecision 0.1.0a1
 
-Publication context: this repository contains the public alpha source and the
-preserved local review evidence. The original local-candidate narrative below is
-historical. See the repository's PUBLICATION.md for the current CI scope and how to check the exact
-commit result; a checked-in workflow alone does not establish a successful run.
-To install this public source on the qualified runtime, create a fresh virtual
-environment and run `python -m pip install .` from the repository root.
-
 A small trusted-local workflow: plan → inspect → explicitly decide → apply →
 freshly verify → retrieve a row's original producer interpretation.
 
@@ -172,9 +165,9 @@ python -c 'import json; from parquet_decision.model import Limits; print(json.du
 ```
 
 Edit a cap lower and pass `--limits limits.json` to plan. Effective limits remain
-bound into approval. See [profile](docs/profile.md), [decisions](docs/decisions.md),
-[verification](docs/verification.md), [bundles](docs/bundles.md),
-[limitations](docs/limitations.md) and [qualification](docs/qualification.md).
+bound into approval. See [profile](profile.md), [decisions](decisions.md),
+[verification](verification.md), [bundles](bundles.md),
+[limitations](limitations.md) and [qualification](qualification.md).
 The last distinguishes full native workloads from enforcement/counter checks.
 Digests establish integrity, not signatures, approval authenticity or scientific
 validity. Linux libc `renameat2(RENAME_NOREPLACE)` is mandatory; no overwriting

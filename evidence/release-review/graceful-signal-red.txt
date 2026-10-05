@@ -1,0 +1,49 @@
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_______________ test_real_cli_cancellation_reaps_worker[SIGTERM] _______________
+
+tmp_path = PosixPath('TEMP_TESTS/test_real_cli_cancellation_rea1')
+signal_name = 'SIGTERM'
+
+    @pytest.mark.parametrize('signal_name', ['SIGINT', 'SIGTERM'])
+    def test_real_cli_cancellation_reaps_worker(tmp_path, signal_name):
+        import signal
+        import time
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+        from parquet_decision.preflight import preflight
+        from parquet_decision.decisions import approve
+        root = tmp_path / 'sources'; root.mkdir()
+        pq.write_table(pa.table({'x': range(1_000_000)}), root / 'million.parquet', compression='NONE')
+        plan = preflight([Path('million.parquet')], root, Limits())
+        approved = approve(plan, [])
+        path = tmp_path / 'approved.json'; path.write_bytes(canonical_json(approved.to_dict()))
+        destination = tmp_path / 'cancelled'
+        env = dict(os.environ, PYTHONPATH=str(Path(cli.__file__).parents[1]))
+        ready = tmp_path / 'worker-pid'
+        code = ("import sys\nfrom pathlib import Path\nfrom parquet_decision import cli, supervise\n"
+                "original=supervise.subprocess.Popen\n"
+                "def spawn(*args, **kwargs):\n p=original(*args, **kwargs)\n Path(sys.argv[1]).write_text(str(p.pid))\n return p\n"
+                "supervise.subprocess.Popen=spawn\nraise SystemExit(cli.main(sys.argv[2:]))")
+        process = subprocess.Popen([sys.executable, '-c', code, str(ready), 'apply', str(path), '--sources', str(root), '--out', str(destination)],
+                                   env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        child = None
+        deadline = time.monotonic() + 10
+        while time.monotonic() < deadline and process.poll() is None:
+            if ready.exists() and ready.read_text():
+                child = int(ready.read_text()); break
+            time.sleep(0.001)
+        if child is None:
+            out, err = process.communicate(timeout=10)
+            pytest.fail('worker startup was not observed: ' + out + err)
+        os.kill(process.pid, getattr(signal, signal_name))
+        out, err = process.communicate(timeout=10)
+>       assert process.returncode == 3 and 'CANCELLED' in out, (process.returncode, out, err)
+E       AssertionError: (-15, '', '')
+E       assert (-15 == 3)
+E        +  where -15 = <Popen: returncode: -15 args: ['PRIVATE_LOCAL_PATH
+
+tests/test_cli_journey.py:133: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_cli_journey.py::test_real_cli_cancellation_reaps_worker[SIGTERM]
+1 failed, 1 passed in 1.14s

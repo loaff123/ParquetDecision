@@ -1,0 +1,74 @@
+{
+  "version": "0.1.0a1",
+  "qualified_runtime": "Linux / Python 3.12.14 / PyArrow 25.0.0",
+  "full_suite": {
+    "development": {
+      "passed": 739,
+      "seconds": 65.01
+    },
+    "sanitized_source": {
+      "passed": 739,
+      "seconds": 68.45
+    },
+    "installed_wheel": {
+      "passed": 739,
+      "seconds": 66.09
+    },
+    "extracted_sdist_installation": {
+      "passed": 739,
+      "seconds": 66.59
+    }
+  },
+  "source_manifest_sha256": "0ff3f39332fc0b4ba5ae40aade82cee7def24c685646009621f91ab50bf532de",
+  "source_file_count": 111,
+  "readme_only_process_commands_per_installed_mode": 18,
+  "all_seven_installed_readme_links_resolve": true,
+  "all_installed_relative_document_links_resolve": true,
+  "linked_original_outcomes": 40,
+  "original_files": 22,
+  "original_outcomes": 40,
+  "initial_independent_review": "REQUEST CHANGES for R1/R2; substantive newcomer journey PASS; R3 usability suggestion",
+  "final_fix": "R1/R2/R3 implemented and requalified locally",
+  "focused_independent_rereviews": {
+    "final_specification_gate": "APPROVED",
+    "final_code_quality_gate": "APPROVED",
+    "whole_product_local_candidate_gate": "APPROVED within reviewed trusted-local alpha profile",
+    "newcomer_gate": "PASS",
+    "R1_R2_R3": "closed"
+  },
+  "remote_ci": "never run",
+  "public_publication": "never run",
+  "independent_final_full_suite": {
+    "source": {
+      "passed": 739,
+      "seconds": 66.74
+    },
+    "installed_wheel": {
+      "passed": 739,
+      "seconds": 62.94
+    },
+    "extracted_sdist": {
+      "passed": 739,
+      "seconds": 63.23
+    },
+    "all_exits": 0
+  },
+  "independent_installed_readme_journeys": {
+    "wheel_processes": 18,
+    "sdist_processes": 18,
+    "expected_exits_matched": true
+  },
+  "controller_reported_final_source_full_suite": {
+    "passed": 739,
+    "seconds": 67.02,
+    "basis": "task owner reported separate final independent source rerun"
+  },
+  "final_source_inventory": {
+    "files": 111,
+    "bytes_and_hashes_match": true,
+    "no_extra_files_after_owned_cache_cleanup": true
+  },
+  "earlier_developmental_independent_evidence": "separate preserved oracle/publication coverage; not fresh final test totals or proof over all inputs",
+  "current_ci_configuration": "source installation/full source tests and distribution build only; does not execute installed wheel or extracted-sdist full suites",
+  "remote_exact_head_ci": "never run"
+}

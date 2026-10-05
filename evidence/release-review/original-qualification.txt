@@ -1,0 +1,2 @@
+Original ten workloads: 8 complete bundles / 2 refusals; 22 source hashes unchanged
+Exact native metadata observation: {'address_space_bytes': 4294967296, 'cpu_seconds': 120, 'files': 1, 'input_bytes': 1398649, 'peak_rss_kib': 108792, 'rows': 1}

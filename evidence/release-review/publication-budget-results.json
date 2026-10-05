@@ -1,0 +1,93 @@
+{
+  "output_1": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "3f4614b69aee846377690fde341cd36ec303a9c3a4eeeaee7a194cc7e4018394",
+    "approval_digest": "310aeb059cd2a26a4981d09abf4410f7e526df3dbc011fea7f6981d1d15c2414",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "total bundle output bytes exceed approved cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  },
+  "output_128": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "4fa6d0bce5a005361180885c5f15f6c512866f3c6252e1e3542fdee5355e7937",
+    "approval_digest": "4f109e7b59e573fa88a7f6915144e1ae5a1c457707d3310c1bd06ba2db2e8ff4",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "total bundle output bytes exceed approved cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  },
+  "output_1126": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "989efc7e15d08775a84b47ddafc1c8da979d94741e1352a2f1c2e640cfef0be7",
+    "approval_digest": "1d5cef5d1471ae3616aa7d0b2d45d95f178fc6cb01d99dda433e360bf2b64388",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "total bundle output bytes exceed approved cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  },
+  "output_1127": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "4da86d5c8a1cb170071417a00963babdee4b4a92a78747cf06c2099353d25a26",
+    "approval_digest": "fa15c0bc30f0c50c60c7a850f12ac33d83a9f7570556b6f18e420e72e8ad229a",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "total bundle output bytes exceed approved cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  },
+  "staging_1": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "4a82cbc0764b95f327fb904d3a3cf995085b0197cafe25e1e97cf85f43b79138",
+    "approval_digest": "e639dcb057461117395e124cc06aaaa099a3c35ee04f2edd1e856e1c28971577",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "LimitError: no-replace qualification probe bytes exceed staging cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  },
+  "staging_12": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "31c7f04d7deb7739a3abbe962bdf574e9b15216b7ae46732f5d4e214734737ff",
+    "approval_digest": "72fa1090d43bbdf5c03636352d9568bf7c158a01843cbb421fde79b3dff1273f",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "LimitError: control bytes exceed total owned staging cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  },
+  "staging_651": {
+    "status": "LIMIT_EXCEEDED",
+    "plan_digest": "98387a035c4bdb4ffef981bc506ca992a99d8b36219c118c26faed59879eb236",
+    "approval_digest": "15dd4953dce56725ea4a5737026b5dc969efcf95b3ca1b6c0800403e6efc7f5e",
+    "source_digest": "",
+    "output_digest": "",
+    "counters": [],
+    "diagnostics": [
+      "LimitError: control bytes exceed total owned staging cap"
+    ],
+    "checked_at_utc": "",
+    "format_version": 1
+  }
+}

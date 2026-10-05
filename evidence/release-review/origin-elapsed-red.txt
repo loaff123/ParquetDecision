@@ -1,0 +1,54 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_________ test_origin_late_elapsed_limit_cannot_return_success[False] __________
+
+tmp_path = PosixPath('TEMP_TESTS/test_origin_late_elapsed_limit0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff7df2d6f30>
+source_bound = False
+
+    @pytest.mark.parametrize('source_bound', [False, True])
+    def test_origin_late_elapsed_limit_cannot_return_success(tmp_path, monkeypatch, source_bound):
+        module = origin(); destination, root = bundle_case(tmp_path)
+        import time
+        clock = [0.0]
+        monkeypatch.setattr(time, 'monotonic', lambda: clock[0])
+        name = 'verify_streams' if source_bound else '_check_output_provenance'
+        real = getattr(module, name)
+        def late(*args, **kwargs):
+            result = real(*args, **kwargs)
+            clock[0] = 301.0
+            return result
+        monkeypatch.setattr(module, name, late)
+>       with pytest.raises(ModelError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'parquet_decision.model.ModelError'>
+
+tests/test_origin.py:134: Failed
+__________ test_origin_late_elapsed_limit_cannot_return_success[True] __________
+
+tmp_path = PosixPath('TEMP_TESTS/test_origin_late_elapsed_limit1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff7d85c7590>
+source_bound = True
+
+    @pytest.mark.parametrize('source_bound', [False, True])
+    def test_origin_late_elapsed_limit_cannot_return_success(tmp_path, monkeypatch, source_bound):
+        module = origin(); destination, root = bundle_case(tmp_path)
+        import time
+        clock = [0.0]
+        monkeypatch.setattr(time, 'monotonic', lambda: clock[0])
+        name = 'verify_streams' if source_bound else '_check_output_provenance'
+        real = getattr(module, name)
+        def late(*args, **kwargs):
+            result = real(*args, **kwargs)
+            clock[0] = 301.0
+            return result
+        monkeypatch.setattr(module, name, late)
+>       with pytest.raises(ModelError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'parquet_decision.model.ModelError'>
+
+tests/test_origin.py:134: Failed
+=========================== short test summary info ============================
+FAILED tests/test_origin.py::test_origin_late_elapsed_limit_cannot_return_success[False]
+FAILED tests/test_origin.py::test_origin_late_elapsed_limit_cannot_return_success[True]
+2 failed in 0.65s

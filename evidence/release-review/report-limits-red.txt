@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_report_limits_argument_cannot_relax_plan_contract ____________
+
+tmp_path = PosixPath('TEMP_TESTS/test_report_limits_argument_ca0')
+
+    def test_report_limits_argument_cannot_relax_plan_contract(tmp_path):
+        from tests.fixtures import plan
+        from parquet_decision.artifacts import write_json_exclusive
+        from parquet_decision.model import ModelError
+        original = plan()
+        lowered = replace(original, limits=replace(Limits(), max_plan_bytes=len(__import__('parquet_decision.model', fromlist=['canonical_json']).canonical_json(original.to_dict())) + 100), plan_digest='')
+>       with pytest.raises(ModelError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'parquet_decision.model.ModelError'>
+
+tests/test_resource_qualification.py:64: Failed
+=========================== short test summary info ============================
+FAILED tests/test_resource_qualification.py::test_report_limits_argument_cannot_relax_plan_contract
+1 failed in 0.04s

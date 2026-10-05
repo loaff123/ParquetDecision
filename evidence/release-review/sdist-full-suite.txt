@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0
+rootdir: DEVELOPMENT_CHECKOUT-release-candidate/private-work/sdist-suite
+configfile: pyproject.toml
+collected 739 items
+
+SDIST_SUITE/tests/test_artifact_writes.py . [  0%]
+.............................                                            [  4%]
+SDIST_SUITE/tests/test_bundle.py . [  4%]
+..............................................................           [ 12%]
+SDIST_SUITE/tests/test_cli_journey.py . [ 12%]
+.......................                                                  [ 15%]
+SDIST_SUITE/tests/test_decisions.py . [ 15%]
+..........................                                               [ 19%]
+SDIST_SUITE/tests/test_distribution.py . [ 19%]
+...                                                                      [ 20%]
+SDIST_SUITE/tests/test_failure_boundaries.py . [ 20%]
+........................                                                 [ 23%]
+SDIST_SUITE/tests/test_independent_schema.py . [ 23%]
+...................................                                      [ 28%]
+SDIST_SUITE/tests/test_model.py . [ 28%]
+........................................................................ [ 38%]
+...................                                                      [ 40%]
+SDIST_SUITE/tests/test_origin.py . [ 40%]
+................                                                         [ 43%]
+SDIST_SUITE/tests/test_plan_cli.py . [ 43%]
+..........................................................               [ 51%]
+SDIST_SUITE/tests/test_preflight.py . [ 51%]
+.......................................................                  [ 58%]
+SDIST_SUITE/tests/test_resource_qualification.py . [ 58%]
+.......                                                                  [ 59%]
+SDIST_SUITE/tests/test_schema.py . [ 59%]
+........................................................................ [ 69%]
+..                                                                       [ 69%]
+SDIST_SUITE/tests/test_sources.py . [ 69%]
+.................                                                        [ 72%]
+SDIST_SUITE/tests/test_stream_verify.py . [ 72%]
+........................................................................ [ 82%]
+...................                                                      [ 84%]
+SDIST_SUITE/tests/test_supervision.py . [ 84%]
+......................................                                   [ 89%]
+SDIST_SUITE/tests/test_transform.py . [ 90%]
+......................                                                   [ 93%]
+SDIST_SUITE/tests/test_verify_mutations.py . [ 93%]
+..................................................                       [100%]
+
+======================== 739 passed in 66.59s (0:01:06) ========================

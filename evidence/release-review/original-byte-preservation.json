@@ -1,0 +1,30 @@
+{
+  "original_fixture_sha256": {
+    "decimal_scale/a.parquet": "bc9f733fcd6c11c3b9ec883966ae183bae34b8797e3ae740e9c353342ad4d1a3",
+    "decimal_scale/b.parquet": "4b036511581620a6ca2004bf1f0b207fb5c0cb053bad8f35394c416cde7540be",
+    "empty/a.parquet": "3816fb693d9227f2e529d91c02e3e69fe7284a09c9c30efce1fb68e5aa7d6d85",
+    "empty/b.parquet": "443a021d8736a684149c5b994ccad247d01ad489609fe7adecc1350069a993c1",
+    "integer_float/a.parquet": "fae328ae3d525c5103ea62bcec8d51ca87d4b8f91f8d06cfaefa9f1fd6b09bda",
+    "integer_float/b.parquet": "38e1c6a8302497d99b785f6752ab4fe1f90e2a885be437bb5ce0d8b54869f196",
+    "larger/00.parquet": "612c1b4b70e197428e1869ab384b07c637d6320720bf1af487ff038b3a6116c1",
+    "larger/01.parquet": "fcd58ee37ca5078f7fb8d9933bb996cd312534d31b8400d3061e18746c0f4215",
+    "larger/02.parquet": "0993fe81bb2d3aa1fde95e5d8c0eea556ce07f5d367dc4c28e88eeff8c130a3d",
+    "larger/03.parquet": "19cd1904547384e4b35ac3ad06afc62b987abc7674b4ae2af5fdba6f2fea5f94",
+    "larger/04.parquet": "daca4f8d4c2577e6464c6b5fbda7d6aed72f71435d19309d1cb3a513b842edb9",
+    "metadata_conflict/a.parquet": "cff98f5c2b9c6b33cfb6146eeeebe82f083c1a05f84980f41ab5acc0e6004ec5",
+    "metadata_conflict/b.parquet": "0aa56d5bb9a80c2474e041aef9bee2455ca44daf8adc19e28c385c6125594787",
+    "nanoseconds/a.parquet": "955da42d3d8c6f6800e30208660fa1532ded420506ddba3e76468c730be2970e",
+    "nested/a.parquet": "23f87f03aeb960e0095160e6a42c8c0cb6ddabd0811d3c26a371f4bd1368d5c3",
+    "nested/b.parquet": "25e2d5939f7a0f4dd112b0a0559c8270ae940dde7daf4e544a3a252b5ae4d26b",
+    "ordinary/a.parquet": "352a8fac2fbb27940a65ca5b91d803ec48a40134f6dd041ed1a4f8d7ae8f10f8",
+    "ordinary/b.parquet": "3752f4f374dd9a67174f6cc5d67c0a2e881bae3723b42ea87f7407580c0e3893",
+    "signed_unsigned/a.parquet": "2266debbbd6775372ddb0eaef48fa111fc32affc7d3023c4960c19662b3ed508",
+    "signed_unsigned/b.parquet": "488c460264904379fff758fa66131ec49bb44d898aee160bfeda561e71e2a2ac",
+    "timestamp_overflow/a.parquet": "9d807f2d7de09e3bf20ea7a579f7d815e26b9ca980fc64ca62d70382225a75d0",
+    "timestamp_overflow/b.parquet": "bf3d85ddcef9a96b5714d1c4de19de85c67e179db358640537fdbf4a3d46d5ab"
+  },
+  "original_fixture_count": 22,
+  "original_outcome_count": 40,
+  "final_comparison_json_bodies_byte_identical": true,
+  "prototype_is_not_shipped": true
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "public_file": "source-full-suite.txt",
+    "raw_sha256": "9fa5b79231e63c18e296e106afa407a59e929bb8b1ba812af17132cdcb04a0f7",
+    "normalized_sha256": "6c9d8ed6c9225e72732c4d0546a77782a8ab4777697ef6d650e4f6d78ea5ce8e",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "wheel-full-suite.txt",
+    "raw_sha256": "38eb2aef4d92a66bce043479abbdba2037955732a5e13fecc00d7902d91a8e25",
+    "normalized_sha256": "49a4140b7662af3d0220702048695e467ef745ccf6a9f3e7a67840634ae15251",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "sdist-full-suite.txt",
+    "raw_sha256": "05354a3e6a513784c3e7081e60396918f907eaede2183d9642ff260c438019db",
+    "normalized_sha256": "91e7b57b325a250205c30b3cfdedbe4a85ac90a7ff9e57aa2abebb957d9ffbf8",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "distribution-build.txt",
+    "raw_sha256": "0ac6d363142d4f5ed72021bdb75b4ca0795da7a8c0355a553237e2ec8a2db1f6",
+    "normalized_sha256": "24a6cbba11aeb9c14e3ff8542673064b297480b0cd5ea4719497843633f2c768",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "source-install.txt",
+    "raw_sha256": "c075acdd201c1a0dd2505a1cfd90ac173849185fe14c185423e95234ff88f220",
+    "normalized_sha256": "6dea25aaa45292042e768404b7d9e0f454d80301c52643fbeff82e4798105ed7",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "wheel-install.txt",
+    "raw_sha256": "6912d837d3fbcc6edcea42407fb0a8119187d42ca4c19a0b1780168dbce15670",
+    "normalized_sha256": "892bdab63f2861ba7a4d583a7f09da47f5919a7bf5e18985f77763bb7dd3d762",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "sdist-install.txt",
+    "raw_sha256": "b5667995de3be0ec5c69764bde36aae5b28c66ff40bc05ea7e7eca94842d679a",
+    "normalized_sha256": "59ec7034725719e44328b4cbbae19f354a4451f411f005431cad24eaad9b4833",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "graceful-signal-red.txt",
+    "raw_sha256": "6fc6ddd2882c98d7f9fb98a7935e1bf3dc8ceabab58fae4db9dde7f428a52aac",
+    "normalized_sha256": "f95c95ee5aa35d34da2a82eca50422514a3012c2d00183a9f8583eaf75a626f4",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "initial-focused-green.txt",
+    "raw_sha256": "d6a506921a36b958258b0d98a6ff6f43b55d89c1f55a3a30c2a4261e651325eb",
+    "normalized_sha256": "d6a506921a36b958258b0d98a6ff6f43b55d89c1f55a3a30c2a4261e651325eb",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "origin-elapsed-red.txt",
+    "raw_sha256": "f575495d3e81e3757065694ea762b6cf35783e58049a77585e449aa891a7b7ba",
+    "normalized_sha256": "1b31eaddf81bc6b638ee672c3a25bdfbbfd79575d8c5967d33a47ddd79bbf48c",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "origin-elapsed-green.txt",
+    "raw_sha256": "230411bc7e08622c5c56a1995419565cf7fcff5e655e076e03cf103975daeb32",
+    "normalized_sha256": "230411bc7e08622c5c56a1995419565cf7fcff5e655e076e03cf103975daeb32",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "report-limits-red.txt",
+    "raw_sha256": "009ed73dd54c93ffa1cee4d10f7016141058080f8277960c875e82793b7b880d",
+    "normalized_sha256": "c897963a96ca473a8b75d29f69109c66bab4e6e309225e871a6ce905b9140033",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "report-limits-green.txt",
+    "raw_sha256": "ed4e09caf2c123cc998a4a054db510aefa9991486486560067423d72e1530bca",
+    "normalized_sha256": "ed4e09caf2c123cc998a4a054db510aefa9991486486560067423d72e1530bca",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "origin-conflict-red.txt",
+    "raw_sha256": "7606d48b647a37743582689c4ae1d1591709ebf6c9a2e74e366f0c6fa199fbf1",
+    "normalized_sha256": "74cc99345585577e4441489ffb9f697148ed11fdffc89652c14ff0cdcb424c04",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "origin-integrity-green.txt",
+    "raw_sha256": "bfa92b38117802e98628e954cd02ed879084618ce8b840bb9bdd035601a9e00f",
+    "normalized_sha256": "bfa92b38117802e98628e954cd02ed879084618ce8b840bb9bdd035601a9e00f",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "original-qualification.txt",
+    "raw_sha256": "61e7fbae22fb1013a90eac1807b8c955a257ad3870e8fd1baad9cd8a651cb140",
+    "normalized_sha256": "61e7fbae22fb1013a90eac1807b8c955a257ad3870e8fd1baad9cd8a651cb140",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "final-fix-red.txt",
+    "raw_sha256": "2183fc51cf31bd7d77b97b340d747d54674f18bc437ea724b6d4bafdcc8e796f",
+    "normalized_sha256": "d57f64301ced08ab881e73b536f3ccbee3399413a7149aecdf34f609172796e0",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "final-fix-focused-green.txt",
+    "raw_sha256": "abc5a3b2a1df3e483277167068849fa9579fb69221f7b4db4ff9284ed5e67154",
+    "normalized_sha256": "abc5a3b2a1df3e483277167068849fa9579fb69221f7b4db4ff9284ed5e67154",
+    "normalization": "disclosed development/temporary/presentation paths; substantive outcomes retained"
+  },
+  {
+    "public_file": "development-full-suite.txt",
+    "raw_sha256": "f204267b3435850c1b683e0070e99d911d5ce08ce2918971158ec0bdd56240b3",
+    "normalized_sha256": "4ef53ebab931c3385223e7983809e9b967b11f81f33ed29593b26afa9f56eea8",
+    "normalization": "development path presentation only"
+  },
+  {
+    "public_file": "readme-final-fix-sdist-journey.json",
+    "raw_sha256": "0b49370460fed8378c321e10682823922cb842db6f58f1c1ce5d45b9c8d5420e",
+    "normalized_sha256": "fa49af2a10728503d3bdcddd03f6e34cca06354c108fcf14113f0d0148440ea5",
+    "normalization": "literal commands/outputs retained; actual original work-directory paths normalized; untouched raw original preserved separately"
+  },
+  {
+    "public_file": "readme-qualified-wheel-journey.json",
+    "raw_sha256": "926ce36da28df20c95e8f5884578f2b7afadcb73668e25873f1330e430999399",
+    "normalized_sha256": "07fd6bb6c515f6fdf81a7272224952b7b3378bfe6a5f1ebd182b0c4a9cd57b53",
+    "normalization": "literal commands/outputs retained; actual original work-directory paths normalized; untouched raw original preserved separately"
+  },
+  {
+    "public_file": "readme-qualified-sdist-journey.json",
+    "raw_sha256": "8c5cf029fc782541e40c5a95651dcb6d09ad11fe563ba30a89d6f79a6961a775",
+    "normalized_sha256": "4de120e3f5d7ee3f0dfee489863d8dc6a59cc4a200306de363faaf80f506adb3",
+    "normalization": "literal commands/outputs retained; actual original work-directory paths normalized; untouched raw original preserved separately"
+  },
+  {
+    "public_file": "readme-final-fix-wheel-journey.json",
+    "raw_sha256": "41ba6cf99069fed855c0ab457d37055e8ca646a2261343bade379a915da02daa",
+    "normalized_sha256": "dd821834f3262da93fa0f70d0e2d460c4db7fc49627e25be9e336eb152306239",
+    "normalization": "literal commands/outputs retained; actual original work-directory paths normalized; untouched raw original preserved separately"
+  }
+]

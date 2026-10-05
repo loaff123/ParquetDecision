@@ -1,0 +1,19 @@
+WARNING: The directory 'QUALIFIED_PIP_CACHE' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing DEVELOPMENT_CHECKOUT-release-candidate/private-work/extracted-final-fix-sdist/parquet_decision-0.1.0a1
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: parquet-decision
+  Building wheel for parquet-decision (pyproject.toml): started
+  Building wheel for parquet-decision (pyproject.toml): finished with status 'done'
+  Created wheel for parquet-decision: filename=parquet_decision-0.1.0a1-py3-none-any.whl size=346168 sha256=ce3a4971dfa7ef982b18598d730f0a9c2a372e7f4294a1a986d571264d7579c7
+  Stored in directory: TEMP_PIP
+Successfully built parquet-decision
+Installing collected packages: parquet-decision
+  Attempting uninstall: parquet-decision
+    Found existing installation: parquet-decision 0.1.0a1
+    Uninstalling parquet-decision-0.1.0a1:
+      Successfully uninstalled parquet-decision-0.1.0a1
+Successfully installed parquet-decision-0.1.0a1
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: python -m pip install --upgrade pip

@@ -1,0 +1,116 @@
+{
+  "parent_hash_deadline": {
+    "approval_digest": "2a0c148ccb15434fa61b72b643bf3326c7bd6211ae56906b7b4aa53462260236",
+    "checked_at_utc": "",
+    "counters": [],
+    "diagnostics": [
+      "LimitError: apply total operation elapsed-time cap exceeded"
+    ],
+    "format_version": 1,
+    "output_digest": "",
+    "plan_digest": "033f6c31fd0157d0dbe0226c599c8bc08e05d7c8759836831e43e6cba00e3799",
+    "source_digest": "",
+    "status": "LIMIT_EXCEEDED"
+  },
+  "postrename_deadline": {
+    "hashes": {
+      "_decision.json": "841ae2a2834733bd7939f3ccd58d71ddc16fd0ba917f1ee4e33b7d7aff304cf3",
+      "_manifest.json": "4a0f800a6235d6a5c67d7f143b7e3aef69e67ebeba89ba2a984c591f6df46fbc",
+      "_verification.json": "2b71427c344e22326b9a9201fef52e052fe6f6f805a337240296a11d7df46d9d",
+      "part-00000.parquet": "306ed18bbdbc3b70ce6c71235a6e600fdc25a8f74beca7d6c793a9ff7d9ec723"
+    },
+    "report": {
+      "approval_digest": "2a0c148ccb15434fa61b72b643bf3326c7bd6211ae56906b7b4aa53462260236",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "LimitError: apply total operation elapsed-time cap exceeded; bundle may be committed at PUBLICATION_DESTINATION; inspect it before retry, destination will never be overwritten"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "033f6c31fd0157d0dbe0226c599c8bc08e05d7c8759836831e43e6cba00e3799",
+      "source_digest": "",
+      "status": "LIMIT_EXCEEDED"
+    },
+    "retry_status": "CONFLICT"
+  },
+  "real_late_worker_failures": {
+    "bad_stdout": {
+      "approval_digest": "b87362063509d02301017aca0c6774cc8695fe4f9b7a908fd4a1039ed9947923",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "invalid or truncated worker protocol: invalid strict JSON"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "c4307c26de35a2199527116e628dba3768c007be48e447b5730a2a3d62825196",
+      "source_digest": "",
+      "status": "ERROR"
+    },
+    "crash": {
+      "approval_digest": "b87362063509d02301017aca0c6774cc8695fe4f9b7a908fd4a1039ed9947923",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "unexpected worker termination: exit 7"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "c4307c26de35a2199527116e628dba3768c007be48e447b5730a2a3d62825196",
+      "source_digest": "",
+      "status": "ERROR"
+    },
+    "disk": {
+      "approval_digest": "b87362063509d02301017aca0c6774cc8695fe4f9b7a908fd4a1039ed9947923",
+      "checked_at_utc": "",
+      "counters": [],
+      "diagnostics": [
+        "OSError: recognized allocation/disk resource refusal"
+      ],
+      "format_version": 1,
+      "output_digest": "",
+      "plan_digest": "c4307c26de35a2199527116e628dba3768c007be48e447b5730a2a3d62825196",
+      "source_digest": "",
+      "status": "LIMIT_EXCEEDED"
+    }
+  },
+  "real_parent_sigkill": {
+    "inventory": [
+      "_decision.json",
+      "_manifest.json",
+      "_verification.json",
+      "part-00000.parquet"
+    ],
+    "marker": "INCOMPLETE",
+    "public_destination": false,
+    "retained_stage": "OWNED_INCOMPLETE_STAGE/dataset"
+  },
+  "real_sigint_worker": {
+    "approval_digest": "b87362063509d02301017aca0c6774cc8695fe4f9b7a908fd4a1039ed9947923",
+    "checked_at_utc": "",
+    "counters": [],
+    "diagnostics": [
+      "worker cancelled by keyboard interruption"
+    ],
+    "format_version": 1,
+    "output_digest": "",
+    "plan_digest": "c4307c26de35a2199527116e628dba3768c007be48e447b5730a2a3d62825196",
+    "source_digest": "",
+    "status": "CANCELLED"
+  },
+  "source_unchanged": true,
+  "two_real_publishers": {
+    "hashes": {
+      "_decision.json": "058227f105f3b2ee851d9f9b087241ddec97c15033c4f588bcb5dfc1b021924f",
+      "_manifest.json": "3b9280640ffad18ce689e5beca106f78de6e5464f8355126d0d6567b3ff65f29",
+      "_verification.json": "571296d66912343f3651e06410e0cd034420f1964b58180f4d468c204da3379c",
+      "part-00000.parquet": "306ed18bbdbc3b70ce6c71235a6e600fdc25a8f74beca7d6c793a9ff7d9ec723"
+    },
+    "retry": "CONFLICT",
+    "statuses": [
+      "CONFLICT",
+      "VERIFIED"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "source_readme_sha256": "f828a3afe2cb8af7565be7d56bb730abae41df857bb97fda9fe64e63c712000c",
+  "installed_readme_sha256": "1052cdb877fae4f04adee9fcbfa0f65cc9c968b6f5e363f9975435400f8deb30",
+  "adaptation": "Only six relative docs/ prefixes removed for sibling installed document targets; linked baseline assets packaged unchanged.",
+  "literal_shell_blocks_byte_identical": true
+}

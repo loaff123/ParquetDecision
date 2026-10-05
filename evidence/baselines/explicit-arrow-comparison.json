@@ -1,0 +1,100 @@
+{
+  "limits": [
+    "The schema choice and metadata archival policy are made explicitly in code by an engineer.",
+    "Source metadata is not archived by this recipe.",
+    "Comparative value checking shares PyArrow and prototype helper; this is not an independent reader oracle.",
+    "One run, not a speed benchmark."
+  ],
+  "results": [
+    {
+      "case": "decimal_scale",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 3,
+      "schema": "x: decimal128(13, 5)",
+      "seconds": 0.003775417000724701,
+      "status": "PASS"
+    },
+    {
+      "case": "empty",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 1,
+      "schema": "x: int64\nadded: string",
+      "seconds": 0.0029676250014745165,
+      "status": "PASS"
+    },
+    {
+      "case": "integer_float",
+      "error": "ArrowInvalid: Integer value 9007199254740993 not in range: -9007199254740992 to 9007199254740992",
+      "final_destination_exists": false,
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "schema": "x: double",
+      "seconds": 0.0006961059989407659,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "larger",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 100000,
+      "schema": "id: int64\npayload: struct<x: int64, note: string>\n  child 0, x: int64\n  child 1, note: string",
+      "seconds": 0.1651819879989489,
+      "status": "PASS"
+    },
+    {
+      "case": "metadata_conflict",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 2,
+      "schema": "x: int32",
+      "seconds": 0.0030400030009332113,
+      "status": "PASS"
+    },
+    {
+      "case": "nanoseconds",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 3,
+      "schema": "t: timestamp[ns, tz=UTC]",
+      "seconds": 0.0021625369990943,
+      "status": "PASS"
+    },
+    {
+      "case": "nested",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 5,
+      "schema": "id: int64\npayload: struct<x: int64, y: string>\n  child 0, x: int64\n  child 1, y: string",
+      "seconds": 0.003074935000768164,
+      "status": "PASS"
+    },
+    {
+      "case": "ordinary",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 3,
+      "schema": "id: int64\nlabel: string\nextra: bool",
+      "seconds": 0.0028844709995610174,
+      "status": "PASS"
+    },
+    {
+      "case": "signed_unsigned",
+      "differences": [],
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "rows": 4,
+      "schema": "count: decimal128(20, 0)",
+      "seconds": 0.0025000799978442956,
+      "status": "PASS"
+    },
+    {
+      "case": "timestamp_overflow",
+      "error": "ArrowInvalid: Casting from timestamp[ms] to timestamp[ns] would result in out of bounds timestamp: 9223372036854775807",
+      "final_destination_exists": false,
+      "method": "explicit-arrow-schema-and-atomic-temp",
+      "schema": "t: timestamp[ns]",
+      "seconds": 0.0007322890014620498,
+      "status": "REFUSED_OR_ERROR"
+    }
+  ]
+}

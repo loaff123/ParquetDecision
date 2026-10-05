@@ -1,0 +1,28 @@
+{
+  "tests": {
+    "__init__.py": "7a94cdc8cb260105af775c0a12e88199370b7b0db4a92e3aa3e77faebb1da64c",
+    "fixtures.py": "65f8ed415d72d3dca214a24757d08a0200627db5117e0d08effd3b9edcd9268f",
+    "test_artifact_writes.py": "433cd5da6976a2e238f7fb6b243f7b5eee71f32ee86dc71eb2e3275f8b6b6d46",
+    "test_bundle.py": "f6e165cc16237a4c4e280b1a2ef3fd19c7cd3a809f8ea6c52eb3fcad801c09b6",
+    "test_cli_journey.py": "34be7961a1f12d498c8db9dedaf368249896953fd11a59d9f1ed2bcb57706981",
+    "test_decisions.py": "10e039ff0d1960d1280851210462831c20d014184dfe65837574b496879adf51",
+    "test_distribution.py": "fc2b4fbd71a0f8f9040a86ce4251ac33181cd57dd03feb4a7ea93d374a624d39",
+    "test_failure_boundaries.py": "cceafef1f14fda76d5fae205a0939961f2888649533cb20cce4a0b14401e02c6",
+    "test_independent_schema.py": "b877bd19f219f07b92ef310d3f42589cdf50aa0e41df4e62574efb4dad0a59e4",
+    "test_model.py": "d652fee70726df3045af7041f7073a3ceb4532719856b3ae4b082dc2450be14d",
+    "test_origin.py": "5469839b1731667e440854d97fdbeeadb00a43b89b002e78c69818b94906c998",
+    "test_plan_cli.py": "45a8d69626432ef9522d5c1f70677c28f6a2319b576bfc5ffe90fbb0b379039b",
+    "test_preflight.py": "ba7c1c343a5cc42ea1b00c16cd99dbf4d99dc446fae145bf002793cab491c74f",
+    "test_resource_qualification.py": "e59982ec2e414749ff0c4476bcf9ebae28e067e4e5163d75216a18dd005b5b4e",
+    "test_schema.py": "0e9a5a69b01f9347cdf6e9cce9decb661f639f71606f5ea79b41a4ee7b90b98c",
+    "test_sources.py": "f9789304e03506c1a44cbba87c148785907cf22c0bda79158d4c707e82774141",
+    "test_stream_verify.py": "c8d0e403a870ea16f393455feb4af4c409dd44ea473be8c681ac80dc9c3a88e1",
+    "test_supervision.py": "4a64c7c35087037c563bff372e7cc9f5615235fbe3fd78860a7e179eebb72f99",
+    "test_transform.py": "73178911dc42e1b72dfa81eb1bb7cc4875f416537ae1a307dd3aba0c3bf99dff",
+    "test_verify_mutations.py": "ea6ecea556758f1251bf57c8b5bacb7f3f52c7feac263513c05baa5bbe260169",
+    "verify_fixtures.py": "44e7701f2dfff3a48c094878dba67543ab5f58660d76491c46e154a4c383db83"
+  },
+  "same_full_relevant_suite": true,
+  "source_wheel_harness_sdist_harness_extracted_sdist_match": true,
+  "pytest_pythonpath_override": false
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parquet-decision"
+version = "0.1.0a1"
+description = "Reviewed local Parquet structural-convergence decisions and provenance"
+requires-python = "==3.12.14"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["pyarrow==25.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "duckdb==1.5.4", "build==1.3.0", "packaging==26.3", "pyproject-hooks==1.3.3"]
+
+[project.scripts]
+pdecision = "parquet_decision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+parquet_decision = ["docs/*.md", "docs/evidence/baselines/*.md", "docs/evidence/baselines/*.json", "data/original-fixtures/*/*.parquet", "data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

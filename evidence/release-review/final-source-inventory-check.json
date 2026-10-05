@@ -1,0 +1,12 @@
+{
+  "manifest_files": 111,
+  "all_manifest_bytes_and_hashes_match": true,
+  "no_extra_files": true,
+  "removed_source_owned_generated_cache_directories": [
+    "tests/__pycache__",
+    "src/parquet_decision/__pycache__",
+    ".pytest_cache"
+  ],
+  "cleanup_after_both_independent_reviewers_finished": true,
+  "source_archive_wheel_sdist_not_modified": true
+}

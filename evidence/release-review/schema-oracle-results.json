@@ -1,0 +1,19 @@
+{
+  "decimal_schema_pairs": 2401,
+  "each_observed_nested_mutation": 47,
+  "final_original_data_verified": true,
+  "fully_rebound_nested_source_forgery": "CONFLICT",
+  "inplace_quiescence_negatives": 2,
+  "integer_unions": 584,
+  "nested_chunk_pairs": 16,
+  "nested_report_counters": {
+    "files": 3,
+    "input_bytes": 3713,
+    "part_bytes": 6586,
+    "rows": 8,
+    "values": 47
+  },
+  "scalar_boundary_mutations": 4,
+  "timestamp_schema_pairs": 144,
+  "zipper_partition_pairs": 5462
+}

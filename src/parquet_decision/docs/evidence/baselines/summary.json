@@ -1,0 +1,39 @@
+{
+  "note": "These are preserved original feasibility observations, not results from the production implementation or an independent decoder. Timings are descriptive single runs, not speed claims.",
+  "outcome_count": 40,
+  "families": [
+    "decimal_scale",
+    "empty",
+    "integer_float",
+    "larger",
+    "metadata_conflict",
+    "nanoseconds",
+    "nested",
+    "ordinary",
+    "signed_unsigned",
+    "timestamp_overflow"
+  ],
+  "counts": {
+    "arrow_recipe": {
+      "PASS": 7,
+      "REFUSED_OR_ERROR": 3
+    },
+    "duckdb_recipe": {
+      "PASS": 6,
+      "VALUE_CHANGE": 3,
+      "REFUSED_OR_ERROR": 1
+    },
+    "explicit-arrow-schema-and-atomic-temp": {
+      "PASS": 8,
+      "REFUSED_OR_ERROR": 2
+    },
+    "prototype": {
+      "PASS": 8,
+      "REFUSED_OR_ERROR": 2
+    }
+  },
+  "files": {
+    "original-comparison.json": "1a1b651eacd016b86790f02a48b5bc228dd04a5edd783653a6d1c8cd5d41bbbf",
+    "explicit-arrow-comparison.json": "0c5e169d68c32cecafa24c985d1a93cd113ee754838621e082be2b64277c7b12"
+  }
+}

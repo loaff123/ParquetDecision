@@ -1,0 +1,110 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+_________ test_inspect_corrupt_complete_bundle_is_conflict[part_bytes] _________
+
+tmp_path = PosixPath('TEMP_TESTS/test_inspect_corrupt_complete_0')
+capsys = <_pytest.capture.CaptureFixture object at 0x7fe876ab7500>
+damage = 'part_bytes'
+
+    @pytest.mark.parametrize('damage', ['part_bytes', 'verification_binding'])
+    def test_inspect_corrupt_complete_bundle_is_conflict(tmp_path, capsys, damage):
+        destination, _ = bundle_case(tmp_path)
+        if damage == 'part_bytes':
+            path = destination / 'part-00000.parquet'
+            path.write_bytes(path.read_bytes() + b'original benign identity change')
+        else:
+            path = destination / '_verification.json'
+            record = json.loads(path.read_text()); record['source_digest'] = 'f' * 64
+            path.write_bytes(canonical_json(record))
+>       assert cli.main(['inspect', str(destination)]) == 1
+E       AssertionError: assert 2 == 1
+E        +  where 2 = <function main at 0x7fe8768b0ea0>(['inspect', 'TEMP_TESTS/test_inspect_corrupt_complete_0/result'])
+E        +    where <function main at 0x7fe8768b0ea0> = cli.main
+
+tests/test_cli_journey.py:164: AssertionError
+----------------------------- Captured stdout call -----------------------------
+INVALID_INPUT: bundle exact inventory/total bytes differ
+____ test_inspect_corrupt_complete_bundle_is_conflict[verification_binding] ____
+
+tmp_path = PosixPath('TEMP_TESTS/test_inspect_corrupt_complete_1')
+capsys = <_pytest.capture.CaptureFixture object at 0x7fe870169c40>
+damage = 'verification_binding'
+
+    @pytest.mark.parametrize('damage', ['part_bytes', 'verification_binding'])
+    def test_inspect_corrupt_complete_bundle_is_conflict(tmp_path, capsys, damage):
+        destination, _ = bundle_case(tmp_path)
+        if damage == 'part_bytes':
+            path = destination / 'part-00000.parquet'
+            path.write_bytes(path.read_bytes() + b'original benign identity change')
+        else:
+            path = destination / '_verification.json'
+            record = json.loads(path.read_text()); record['source_digest'] = 'f' * 64
+            path.write_bytes(canonical_json(record))
+>       assert cli.main(['inspect', str(destination)]) == 1
+E       AssertionError: assert 2 == 1
+E        +  where 2 = <function main at 0x7fe8768b0ea0>(['inspect', 'TEMP_TESTS/test_inspect_corrupt_complete_1/result'])
+E        +    where <function main at 0x7fe8768b0ea0> = cli.main
+
+tests/test_cli_journey.py:164: AssertionError
+----------------------------- Captured stdout call -----------------------------
+INVALID_INPUT: bundle verification/decision/part digest bindings differ
+________ test_all_source_and_installed_document_relative_links_resolve _________
+
+    def test_all_source_and_installed_document_relative_links_resolve():
+        root = Path(__file__).resolve().parents[1]
+        installed = resources.files('parquet_decision').joinpath('docs')
+        roots = [root / 'README.md', *sorted((root / 'docs').glob('*.md')),
+                 Path(str(installed.joinpath('README.md'))), *sorted(Path(str(installed)).glob('*.md'))]
+        checked = []
+        for document in roots:
+            for link in relative_links(document):
+                target = document.parent / link
+>               assert target.is_file(), f'{document.name}: unresolved relative link {link}'
+E               AssertionError: README.md: unresolved relative link evidence/baselines/README.md
+E               assert False
+E                +  where False = is_file()
+E                +    where is_file = PosixPath('DEVELOPMENT_CHECKOUT/src/parquet_decision/docs/evidence/baselines/README.md').is_file
+
+tests/test_distribution.py:48: AssertionError
+_______ test_installed_linked_baselines_preserve_forty_original_outcomes _______
+
+    def test_installed_linked_baselines_preserve_forty_original_outcomes():
+        import hashlib
+        installed = resources.files('parquet_decision').joinpath('docs', 'evidence', 'baselines')
+        root = Path(__file__).resolve().parents[1] / 'evidence' / 'baselines'
+        for name in ['README.md', 'original-comparison.json', 'explicit-arrow-comparison.json', 'summary.json']:
+>           assert installed.joinpath(name).is_file(), 'missing linked installed baseline: ' + name
+E           AssertionError: missing linked installed baseline: README.md
+E           assert False
+E            +  where False = is_file()
+E            +    where is_file = PosixPath('DEVELOPMENT_CHECKOUT/src/parquet_decision/docs/evidence/baselines/README.md').is_file
+E            +      where PosixPath('DEVELOPMENT_CHECKOUT/src/parquet_decision/docs/evidence/baselines/README.md') = joinpath('README.md')
+E            +        where joinpath = PosixPath('DEVELOPMENT_CHECKOUT/src/parquet_decision/docs/evidence/baselines').joinpath
+
+tests/test_distribution.py:60: AssertionError
+_________________ test_example_rerun_is_concise_and_immutable __________________
+
+tmp_path = PosixPath('TEMP_TESTS/test_example_rerun_is_concise_0')
+
+    def test_example_rerun_is_concise_and_immutable(tmp_path):
+        import hashlib
+        env = dict(os.environ, PYTHONPATH=str(Path(cli.__file__).parents[1]))
+        args = [sys.executable, '-m', 'parquet_decision.examples', 'sources']
+        first = subprocess.run(args, cwd=tmp_path, env=env, capture_output=True, text=True)
+        assert first.returncode == 0, first.stderr
+        root = tmp_path / 'sources'
+        original = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in root.iterdir()}
+        again = subprocess.run(args, cwd=tmp_path, env=env, capture_output=True, text=True)
+        assert again.returncode == 1
+        text = again.stdout + again.stderr
+>       assert 'destination already exists' in text and 'preserved' in text and 'choose a new' in text
+E       assert ('destination already exists' in 'Traceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>....12/pathlib.py", line 1311, in mkdir\n    os.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: \'sources\'\n')
+
+tests/test_cli_journey.py:210: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_cli_journey.py::test_inspect_corrupt_complete_bundle_is_conflict[part_bytes]
+FAILED tests/test_cli_journey.py::test_inspect_corrupt_complete_bundle_is_conflict[verification_binding]
+FAILED tests/test_distribution.py::test_all_source_and_installed_document_relative_links_resolve
+FAILED tests/test_distribution.py::test_installed_linked_baselines_preserve_forty_original_outcomes
+FAILED tests/test_cli_journey.py::test_example_rerun_is_concise_and_immutable
+5 failed in 0.63s

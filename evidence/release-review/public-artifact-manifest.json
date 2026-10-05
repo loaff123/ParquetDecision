@@ -1,0 +1,25 @@
+{
+  "artifacts": [
+    {
+      "path": "dist/parquet-decision-public-source-0.1.0a1.tar.gz",
+      "bytes": 620818,
+      "sha256": "0789efdfa84f6528c13ba17c5b9a3afa7fc3ed6a0ade4284651bf5d68cd5b54f"
+    },
+    {
+      "path": "dist/parquet_decision-0.1.0a1-py3-none-any.whl",
+      "bytes": 346168,
+      "sha256": "eb0ce27f8615c6ff404f71e089a51cca2e1971a74b519dbe5fcdbf684cc3e5a1"
+    },
+    {
+      "path": "dist/parquet_decision-0.1.0a1.tar.gz",
+      "bytes": 633766,
+      "sha256": "c1a3081c7350b8646b5d90aca64287f3c3202f0fcc8956aa5058ba2fca1ad303"
+    },
+    {
+      "path": "parquet-decision-public-review-0.1.0a1.tar.gz",
+      "bytes": 66170,
+      "sha256": "f4dc2025bcd40defaecc85c1d16f9d4e22369626b21d377f78e38c55dd008e2b"
+    }
+  ],
+  "review_archive_excludes_private_work": true
+}

@@ -1,0 +1,42 @@
+{
+  "review_reports": [
+    {
+      "description": "Final independent code rereview",
+      "raw_sha256": "e14c85371eca1ef7ded05162075949a6c3bfa9e1628f806fadaa5e4a011a56a4",
+      "public_file": "final-independent-code-review.md",
+      "public_sha256": "437ced45b0c8f1298814ccd7fcc507f729d061f14be5398838c5b79052953e55",
+      "reviewer_public_wording_raw_sha256": "4b24df30309abd078357b3edd6f2749894dfcdd627cc0505aa8bbffe30154a30",
+      "presentation": "Reviewer-provided closure with internal task-ordinal phrasing removed and explicit presentation disclosure; full raw report preserved separately"
+    },
+    {
+      "description": "Final independent newcomer rereview",
+      "raw_sha256": "d69b269a437c9fbbb62bdeb297e386acfb678f8a1f3a878a7e73b77042f223bf",
+      "public_file": "final-independent-newcomer-review.md",
+      "public_sha256": "28e79f877c90c12aeb4e35edd60e917292cd7a9955d7fa04e9be69d9a9385ba8",
+      "presentation": "Final appended PASS verdict and bounded fresh-install/usability outcomes summarized; initial findings remain preserved"
+    }
+  ],
+  "full_suite_receipts": [
+    {
+      "public_file": "independent-final-source-full-suite.txt",
+      "raw_sha256": "165dacb14af3b954bfe71b3579d22bf65cb6ffbe15c08147bf890a0ece77c5ec",
+      "normalized_sha256": "64f1b4e20e54ed2a98989f32e4035293e13af961469fc2698b78fd04a8a1d68f",
+      "normalization": "Presentation paths only; exact tests, counts, durations and outcomes retained",
+      "evidence_time": "fresh independent final-candidate rereview"
+    },
+    {
+      "public_file": "independent-final-wheel-full-suite.txt",
+      "raw_sha256": "7a21f7e5b9739076d21f22d33ead71fa5ced8ebb123d0dfbf651660a6e12666f",
+      "normalized_sha256": "a76079472f98ff94ef214f413ebcd9f4972a74db87f3c2b0beb54e3f687835e7",
+      "normalization": "Presentation paths only; exact tests, counts, durations and outcomes retained",
+      "evidence_time": "fresh independent final-candidate rereview"
+    },
+    {
+      "public_file": "independent-final-sdist-full-suite.txt",
+      "raw_sha256": "b9c3f6b3d378a68d3c2462c9abfb26203c453cbacc8c6a11f901bdc9e8a5fcfc",
+      "normalized_sha256": "7477d1b8566355d329fa60c4b9819afb0b1454648db1a543a593c230ce4a15c9",
+      "normalization": "Presentation paths only; exact tests, counts, durations and outcomes retained",
+      "evidence_time": "fresh independent final-candidate rereview"
+    }
+  ]
+}

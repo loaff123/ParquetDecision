@@ -1,0 +1,350 @@
+{
+  "notes": [
+    "Times are single-run descriptive timings including verification, not a speed benchmark.",
+    "Prototype verification shares PyArrow with the transformation; not an independent decoder.",
+    "Baselines were executed with their useful documented merge primitives; full applications OmniMorph and ParquetHarmonize were not executed.",
+    "Metadata archive acknowledges conflict and does not make m/cm scientifically interchangeable."
+  ],
+  "results": [
+    {
+      "case": "ordinary",
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "rows": 3,
+      "schema": "id: int64\nlabel: string\nextra: bool",
+      "seconds_including_verification": 0.005065106997790281,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "ordinary",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 3,
+      "schema": "id: int64\nlabel: string\nextra: bool",
+      "seconds_including_verification": 0.01773209399834741,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "ordinary",
+      "conflicts": 0,
+      "field_checks": 4,
+      "inputs": 2,
+      "method": "prototype",
+      "rows": 3,
+      "seconds_including_verification": 0.0062277319993881974,
+      "sources": 2,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "nested",
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "rows": 5,
+      "schema": "id: int64\npayload: struct<x: int64, y: string>\n  child 0, x: int64\n  child 1, y: string",
+      "seconds_including_verification": 0.0031680440006311983,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "nested",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 5,
+      "schema": "id: int64\npayload: struct<x: int64, y: string>\n  child 0, x: int64\n  child 1, y: string",
+      "seconds_including_verification": 0.014024297997821122,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "nested",
+      "conflicts": 0,
+      "field_checks": 4,
+      "inputs": 2,
+      "method": "prototype",
+      "rows": 5,
+      "seconds_including_verification": 0.005220847997406963,
+      "sources": 2,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "signed_unsigned",
+      "error": "ArrowInvalid: Integer value 18446744073709551615 not in range: 0 to 9223372036854775807",
+      "final_destination_exists": true,
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "seconds_including_verification": 0.0008688130001246464,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "signed_unsigned",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 4,
+      "schema": "count: double",
+      "seconds_including_verification": 0.012877680997917196,
+      "source_value_differences": [
+        {
+          "error": "ArrowInvalid: Float value 9223372036854775808.000000 was truncated converting to int64",
+          "field": "count",
+          "kind": "inverse-projection-failed",
+          "source": "a.parquet"
+        },
+        {
+          "error": "ArrowInvalid: Float value 18446744073709551616.000000 was truncated converting to uint64",
+          "field": "count",
+          "kind": "inverse-projection-failed",
+          "source": "b.parquet"
+        }
+      ],
+      "status": "VALUE_CHANGE"
+    },
+    {
+      "case": "signed_unsigned",
+      "conflicts": 0,
+      "field_checks": 2,
+      "inputs": 2,
+      "method": "prototype",
+      "rows": 4,
+      "seconds_including_verification": 0.004553144000965403,
+      "sources": 2,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "nanoseconds",
+      "inputs": 1,
+      "method": "arrow_recipe",
+      "rows": 3,
+      "schema": "t: timestamp[ns, tz=UTC]",
+      "seconds_including_verification": 0.001865505997557193,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "nanoseconds",
+      "inputs": 1,
+      "method": "duckdb_recipe",
+      "rows": 3,
+      "schema": "t: timestamp[us, tz=UTC]",
+      "seconds_including_verification": 0.010741576999862446,
+      "source_value_differences": [
+        {
+          "field": "t",
+          "kind": "logical-value-change",
+          "source": "a.parquet"
+        }
+      ],
+      "status": "VALUE_CHANGE"
+    },
+    {
+      "case": "nanoseconds",
+      "conflicts": 0,
+      "field_checks": 1,
+      "inputs": 1,
+      "method": "prototype",
+      "rows": 3,
+      "seconds_including_verification": 0.0029317779990378767,
+      "sources": 1,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "metadata_conflict",
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "rows": 2,
+      "schema": "x: int32\n  -- field metadata --\n  unit: 'm'\n-- schema metadata --\nproducer: 'A'",
+      "seconds_including_verification": 0.002367252000112785,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "metadata_conflict",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 2,
+      "schema": "x: int32",
+      "seconds_including_verification": 0.012485240997193614,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "metadata_conflict",
+      "conflicts": 2,
+      "field_checks": 2,
+      "inputs": 2,
+      "method": "prototype",
+      "rows": 2,
+      "seconds_including_verification": 0.0046460230005322956,
+      "sources": 2,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "integer_float",
+      "error": "ArrowInvalid: Integer value 9007199254740993 not in range: -9007199254740992 to 9007199254740992",
+      "final_destination_exists": true,
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "seconds_including_verification": 0.0007367559992417227,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "integer_float",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 2,
+      "schema": "x: double",
+      "seconds_including_verification": 0.014479301000392297,
+      "source_value_differences": [
+        {
+          "field": "x",
+          "kind": "logical-value-change",
+          "source": "a.parquet"
+        }
+      ],
+      "status": "VALUE_CHANGE"
+    },
+    {
+      "case": "integer_float",
+      "error": "ValueError: integer/float policy required at x",
+      "final_destination_exists": false,
+      "inputs": 2,
+      "method": "prototype",
+      "seconds_including_verification": 0.00047702899973955937,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "decimal_scale",
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "rows": 3,
+      "schema": "x: decimal128(13, 5)",
+      "seconds_including_verification": 0.0025981459984905086,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "decimal_scale",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 3,
+      "schema": "x: decimal128(13, 5)",
+      "seconds_including_verification": 0.013772043002973078,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "decimal_scale",
+      "conflicts": 0,
+      "field_checks": 2,
+      "inputs": 2,
+      "method": "prototype",
+      "rows": 3,
+      "seconds_including_verification": 0.005543617000512313,
+      "sources": 2,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "empty",
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "rows": 1,
+      "schema": "x: int64\nadded: string",
+      "seconds_including_verification": 0.0031235419992299285,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "empty",
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "rows": 1,
+      "schema": "x: int64\nadded: string",
+      "seconds_including_verification": 0.013822762997733662,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "empty",
+      "conflicts": 0,
+      "field_checks": 3,
+      "inputs": 2,
+      "method": "prototype",
+      "rows": 1,
+      "seconds_including_verification": 0.004620374002115568,
+      "sources": 2,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    },
+    {
+      "case": "timestamp_overflow",
+      "error": "ArrowInvalid: Casting from timestamp[ms] to timestamp[ns] would result in out of bounds timestamp: 9223372036854775807",
+      "final_destination_exists": true,
+      "inputs": 2,
+      "method": "arrow_recipe",
+      "seconds_including_verification": 0.0008191980014089495,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "timestamp_overflow",
+      "error": "ConversionException: Conversion Error: Could not convert Timestamp(MS) to Timestamp(US)",
+      "final_destination_exists": false,
+      "inputs": 2,
+      "method": "duckdb_recipe",
+      "seconds_including_verification": 0.010025214000052074,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "timestamp_overflow",
+      "error": "ArrowInvalid: Casting from timestamp[ms] to timestamp[ns] would result in out of bounds timestamp: 9223372036854775807",
+      "final_destination_exists": false,
+      "inputs": 2,
+      "method": "prototype",
+      "seconds_including_verification": 0.0014084650028962642,
+      "status": "REFUSED_OR_ERROR"
+    },
+    {
+      "case": "larger",
+      "inputs": 5,
+      "method": "arrow_recipe",
+      "rows": 100000,
+      "schema": "id: int64\npayload: struct<x: int64, note: string>\n  child 0, x: int64\n  child 1, note: string",
+      "seconds_including_verification": 0.17444746200271766,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "larger",
+      "inputs": 5,
+      "method": "duckdb_recipe",
+      "rows": 100000,
+      "schema": "id: int64\npayload: struct<x: int64, note: string>\n  child 0, x: int64\n  child 1, note: string",
+      "seconds_including_verification": 0.13347502399847144,
+      "source_value_differences": [],
+      "status": "PASS"
+    },
+    {
+      "case": "larger",
+      "conflicts": 0,
+      "field_checks": 10,
+      "inputs": 5,
+      "method": "prototype",
+      "rows": 100000,
+      "seconds_including_verification": 0.23342463699736982,
+      "sources": 5,
+      "status": "PASS",
+      "verification": "same-library inverse projection and logical value comparison, not independent decoding"
+    }
+  ],
+  "versions": {
+    "duckdb": "1.5.4",
+    "pyarrow": "25.0.0",
+    "python": "3.12.14"
+  }
+}
