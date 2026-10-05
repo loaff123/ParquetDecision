@@ -1,0 +1,36 @@
+{
+  "observed_incident": {
+    "head": "7232fe8f331c75877369320e91138e45fa7e2e4c",
+    "run": 37377288464,
+    "attempt": 1,
+    "worker_signal": "SIGABRT",
+    "message": "terminate called without an active exception",
+    "product_status": "ERROR",
+    "exact_native_stack_captured": false
+  },
+  "qualified_environment": "Linux / Python 3.12.14 / PyArrow 25.0.0",
+  "input": "Original benign 23-row fixture, source batches 1, output batches/row groups 2",
+  "limits": "Unchanged original full limits; no lower-address-space or hostile-input investigation",
+  "mechanism_observed": {
+    "original": "Python-file source/output data reads occur on an Arrow background I/O thread despite use_threads=False",
+    "explicit_pre_buffer_false": "All observed Python-file read/readinto callbacks occur on worker main thread",
+    "verified_rows_each": 23,
+    "verified_values_each": 23,
+    "native_thread_count_is_not_a_regression_assertion": true
+  },
+  "bounded_repetitions": {
+    "original_public_verifier_calls": {"runs": 200, "failures": 0},
+    "original_bootstrap_workers": {"runs": 1000, "failures": 0},
+    "private_synchronous_read_workers": {"runs": 200, "failures": 0}
+  },
+  "claim_limit": "SIGABRT was not reproduced locally and its exact native cause remains unresolved. Removing the observed background-I/O lifecycle path is supported; no claim that all native aborts are prevented.",
+  "repair_scope": "Only pre_buffer=False added to five ParquetFile calls, plus regression tests and accurate documentation",
+  "preserved_behavior": ["full independent source verification", "terminal ERROR for nonzero/signal exits", "fresh isolated workers", "same resource caps", "extension refusals", "no-clobber publication"],
+  "deterministic_regression": {"before": "6 failed, including actual background read callbacks", "after": "6 passed"},
+  "primary_references": [
+    "https://arrow.apache.org/docs/python/generated/pyarrow.parquet.ParquetFile.html",
+    "https://arrow.apache.org/docs/cpp/threading.html",
+    "https://github.com/apache/arrow/issues/34314"
+  ],
+  "reference_limit": "Installed pinned source establishes defaults. The upstream issue is analogous supporting context, not a captured stack for this incident."
+}

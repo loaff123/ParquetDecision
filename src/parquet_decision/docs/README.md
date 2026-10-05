@@ -1,5 +1,9 @@
 # ParquetDecision 0.1.0a1
 
+Publication context: the original local-candidate narrative below is historical.
+The qualification document records the later synchronous-read lifecycle change
+and distinguishes the initial remote failure from subsequent qualification.
+
 A small trusted-local workflow: plan → inspect → explicitly decide → apply →
 freshly verify → retrieve a row's original producer interpretation.
 

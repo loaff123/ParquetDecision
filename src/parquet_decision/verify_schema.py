@@ -39,7 +39,7 @@ def _derive_expected_schema(snapshots: list[Snapshot], limits: Limits) -> Schema
         source = snapshot.source
         try:
             with _open_snapshot(snapshot) as stream:
-                reader = pq.ParquetFile(stream, arrow_extensions_enabled=False)
+                reader = pq.ParquetFile(stream, arrow_extensions_enabled=False, pre_buffer=False)
                 fields, metadata = _fields_from_arrow(reader.schema_arrow)
                 observed = SourceSpec(source.source_id, source.relative_path, source.sha256,
                                       source.size_bytes, reader.metadata.num_rows, fields, metadata)

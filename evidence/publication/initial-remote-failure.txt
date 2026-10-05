@@ -1,0 +1,25 @@
+=================================== FAILURES ===================================
+_____________________ test_chunk_boundary_neutrality[2-1] ______________________
+
+tmp_path = PosixPath('<pytest temporary fixture>')
+source_batch = 1, output_batch = 2
+
+    @pytest.mark.parametrize('source_batch', [1, 3, 7])
+    @pytest.mark.parametrize('output_batch', [2, 5, 8])
+    def test_chunk_boundary_neutrality(tmp_path, source_batch, output_batch):
+        approved, snapshots, parts, _ = simple_case(tmp_path, count=23, output_groups=output_batch)
+        report = verifier().verify_streams(approved, snapshots, parts, source_batch_rows=source_batch, output_batch_rows=output_batch)
+>       assert report.verified, report
+E       AssertionError: VerificationReport(status='ERROR', plan_digest='4bf3e8b1f87bf3acbf10f108a8b7258a105314daa0c47f604753b51c8468d8b5', app...ed worker termination: SIGABRT; terminate called without an active exception
+E         ',), checked_at_utc='', format_version=1)
+E       assert False
+E        +  where False = VerificationReport(status='ERROR', plan_digest='4bf3e8b1f87bf3acbf10f108a8b7258a105314daa0c47f604753b51c8468d8b5', app...ed worker termination: SIGABRT; terminate called without an active exception\n',), checked_at_utc='', format_version=1).verified
+
+tests/test_stream_verify.py:22: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_stream_verify.py::test_chunk_boundary_neutrality[2-1] - AssertionError: VerificationReport(status='ERROR', plan_digest='4bf3e8b1f87bf3acbf10f108a8b7258a105314daa0c47f604753b51c8468d8b5', app...ed worker termination: SIGABRT; terminate called without an active exception
+  ',), checked_at_utc='', format_version=1)
+assert False
+ +  where False = VerificationReport(status='ERROR', plan_digest='4bf3e8b1f87bf3acbf10f108a8b7258a105314daa0c47f604753b51c8468d8b5', app...ed worker termination: SIGABRT; terminate called without an active exception\n',), checked_at_utc='', format_version=1).verified
+=================== 1 failed, 738 passed in 83.56s (0:01:23) ===================
+##[error]Process completed with exit code 1.

@@ -457,7 +457,7 @@ def _verify_streams(approved, snapshots, parts, *, source_batch_rows=None, outpu
             if part.target_schema_digest != target_digest:
                 _fail(source_id, 'schema', (), 'part target-schema digest differs')
             with _open_part(part) as stream:
-                reader = pq.ParquetFile(stream, arrow_extensions_enabled=False)
+                reader = pq.ParquetFile(stream, arrow_extensions_enabled=False, pre_buffer=False)
                 _check_schema(reader.schema_arrow, expected, source_id)
                 if reader.metadata.num_rows != part.rows:
                     _fail(source_id, 'inventory', (), 'actual output row count differs')

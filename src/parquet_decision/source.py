@@ -213,7 +213,7 @@ def iter_source_batches(snapshot: Snapshot, batch_rows: int) -> Iterator[Batch]:
     import pyarrow.parquet as pq
     from .model import _fields_from_arrow
     with _open_snapshot(snapshot) as stream:
-        reader = pq.ParquetFile(stream, arrow_extensions_enabled=False)
+        reader = pq.ParquetFile(stream, arrow_extensions_enabled=False, pre_buffer=False)
         fields, metadata = _fields_from_arrow(reader.schema_arrow)
         if (fields, metadata, reader.metadata.num_rows) != (snapshot.source.fields, snapshot.source.schema_metadata, snapshot.source.num_rows):
             raise ModelError('snapshot schema/row identity differs from source inventory')

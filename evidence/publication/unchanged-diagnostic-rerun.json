@@ -1,0 +1,24 @@
+{
+  "head": "7232fe8f331c75877369320e91138e45fa7e2e4c",
+  "run": 37377288464,
+  "attempt": 2,
+  "job": 111992112291,
+  "conclusion": "success",
+  "purpose": "Unchanged diagnostic rerun; not proof of a repair",
+  "url": "https://github.com/loaff123/ParquetDecision/actions/runs/37377288464/attempts/2",
+  "suites": {
+    "source": {
+      "passed": 739,
+      "seconds": 80.4
+    },
+    "installed_wheel": {
+      "passed": 739,
+      "seconds": 70.27
+    },
+    "extracted_sdist": {
+      "passed": 739,
+      "seconds": 69.04
+    }
+  },
+  "raw_log_sha256": "b6e2b7be8767e3318d0bd3f37c9e20f9cb61dc2e55b97942dc14b67aa0e411f1"
+}

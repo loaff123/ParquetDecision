@@ -86,9 +86,28 @@ and stale development-stage comments; public receipts disclose it rather than
 claiming byte identity with raw internal logs. Untouched original records/raw
 receipts remain separately preserved for the local controller.
 
-## Gates never run
+## Historical local-gate status
 
-Public Git/repository publication, registry upload, tags, remote exact-head CI,
-Sites and other public/remote writes have **never run** for this candidate. The
-local CI configuration is preparation only. Independent final code/product review
-is a separate owner-run gate and is not replaced by implementer suite results.
+At the original local review, public Git publication and remote exact-head CI had
+never run. That historical status is superseded by the publication evidence and the
+current commit's CI result. Registry uploads, tags and Sites remain outside this
+publication. Independent code/product review is separate from implementer suites.
+
+## Publication lifecycle refinement
+
+The initial remote installed-wheel suite recorded one worker SIGABRT on the original
+23-row chunk-boundary fixture; it remained ERROR and was not promoted to VERIFIED.
+An unchanged diagnostic rerun was green. The exact native crash stack is unknown,
+and background I/O has not been proven to cause that observed SIGABRT.
+
+Pinned Arrow defaults to background I/O pre-buffering even with `use_threads=False`.
+A controlled read-callback probe showed Python source/output reads on a background
+thread. All five reader constructions now pass `pre_buffer=False`; the same complete
+23-row/23-value verification reads only on the worker main thread. Regression tests
+check real callback thread identity and each construction's explicit setting.
+This removes that lifecycle path without changing limits, error classifications,
+verification or publication guarantees. It is not a general native-safety claim.
+
+The earlier local 739-test receipts and unchanged diagnostic CI rerun remain
+historical. Use the current commit's source, installed-wheel and extracted-sdist
+CI result for revised qualification.

@@ -1,0 +1,14 @@
+{
+  "wheel": {
+    "processes": 18,
+    "all_expected_exits": true,
+    "negative_complete_outputs_absent": true,
+    "raw_receipt_sha256": "86fb3ebb5a2e90366549d7eef67703310e913ad6f3c29de4d88aba6c6068250d"
+  },
+  "sdist": {
+    "processes": 18,
+    "all_expected_exits": true,
+    "negative_complete_outputs_absent": true,
+    "raw_receipt_sha256": "e5eba7fd4fb52c69124075158f86510cfb30441981ae62b8018bb813db12596c"
+  }
+}

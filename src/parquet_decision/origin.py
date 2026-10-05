@@ -106,7 +106,7 @@ def _origin_worker(request, limits, descriptor, stage, destination):
     rows = 0
     for part in parts:
         with _open_part(part) as stream:
-            reader = pq.ParquetFile(stream, arrow_extensions_enabled=False)
+            reader = pq.ParquetFile(stream, arrow_extensions_enabled=False, pre_buffer=False)
             _check_schema(reader.schema_arrow, approved.plan.proposal, part.source_id)
             if reader.metadata.num_rows != part.rows:
                 _fail(part.source_id, 'inventory', (), 'origin part row count differs')

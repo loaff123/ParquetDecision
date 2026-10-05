@@ -1,0 +1,21 @@
+{
+  "repository": "loaff123/ParquetDecision",
+  "head_sha": "7232fe8f331c75877369320e91138e45fa7e2e4c",
+  "run_id": 37377288464,
+  "attempt": 1,
+  "job_id": 111989630439,
+  "url": "https://github.com/loaff123/ParquetDecision/actions/runs/37377288464/attempts/1",
+  "conclusion": "failure",
+  "source_suite": {
+    "passed": 739
+  },
+  "wheel_suite": {
+    "passed": 738,
+    "failed": 1
+  },
+  "sdist_suite": "not reached",
+  "failed_test": "tests/test_stream_verify.py::test_chunk_boundary_neutrality[2-1]",
+  "observation": "Worker SIGABRT with terminate called without an active exception; product correctly returned ERROR, not VERIFIED",
+  "root_cause": "under investigation; background I/O/interpreter-finalization hypothesis is not established from stderr alone",
+  "raw_log_sha256": "2036fbf6ace727066444b85b4d8deb295121013c22951d38fe58a5d7e39697dc"
+}

@@ -164,7 +164,7 @@ def _native_scan(copies, staging: Path, limits: Limits) -> Plan:
             # been read. It is never admitted to the returned source inventory.
             placeholder = SourceSpec(copy.source_id, copy.relative_path, copy.sha256, copy.size_bytes, 0, ())
             with _open_snapshot(Snapshot(placeholder, copy.local_path)) as stream:
-                reader = pq.ParquetFile(stream, arrow_extensions_enabled=False)
+                reader = pq.ParquetFile(stream, arrow_extensions_enabled=False, pre_buffer=False)
                 fields, metadata = _fields_from_arrow(reader.schema_arrow)
                 num_rows = reader.metadata.num_rows
             source = SourceSpec(copy.source_id, copy.relative_path, copy.sha256, copy.size_bytes, num_rows, fields, metadata)
